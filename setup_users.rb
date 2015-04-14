@@ -50,11 +50,11 @@ group.users << User.where(username: %w(brooke bobby))
 group.add_property Property.all
 
 group = AccessGroup.create!(name: 'BNPPRE Occupier Mgmt editors', access_template: edit_template)
-group.users << User.where(username: %w(bella ben))
+group.users << User.where(username: %w(brooke bella ben))
 group.add_property bnppre_select_properties
 
 group = AccessGroup.create!(name: 'BNPPRE Occupier Mgmt readers', access_template: read_template)
-group.users << User.where(username: 'blake')
+group.users << User.where(username: %w(brooke blake))
 group.add_property bnppre_select_properties
 
 group = AccessGroup.create!(name: 'All Aviva', access_template: edit_template)
@@ -62,9 +62,9 @@ group.users << User.where(username: %w(amelia alfie))
 group.add_property aviva_properties
 
 group = AccessGroup.create!(name: 'Aviva Occupier Mgmt editors', access_template: edit_template)
-group.users << User.where(username: 'ava')
+group.users << User.where(username: %w(amelia ava))
 group.add_property aviva_select_properties
 
 group = AccessGroup.create!(name: 'Aviva Occupier Mgmt readers', access_template: read_template)
-group.users << User.where(username: 'archie')
+group.users << User.where(username: %w(amelia archie))
 group.add_property aviva_select_properties
